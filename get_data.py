@@ -137,7 +137,7 @@ def inverse_transform(series, forecasts, scaler, n_test, n_seq, n_features):
     #pdb.set_trace()
     # invert differencing
     #pdb.set_trace()
-    index = len(series) - n_test +  - 1
+    index = len(series) - n_test  - 1
     last_ob = series.values[index]
     inv_diff = inverse_difference(last_ob, inv_scale)
     # print(inv_diff)
