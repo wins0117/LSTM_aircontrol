@@ -22,16 +22,22 @@ client.connect("140.122.184.223", 8883, 60)
 while(1):
         
     prediction = predict()
-    print(prediction)
+    
     thi = prediction[0][9][5]
     co2 = prediction[0][9][0]
+    print("the prediction of 10th minute thi is :　", thi)
+    print("the prediction of 10th minute co2 is :　", co2)
     if( thi > 26 ) :
+        print("turn on the air condiction")
         client.publish("ac","on")
     if( thi < 22 ) :
+        print("turn off the air condiction")
         client.publish("ac","on")
-    if( co2 > 1000) :
+    if( co2 > 800) :
+        print("turn on the fan")
         client.publish("plan/fan","on")
     if( co2 < 500) :
+        print("turn on the fan")
         client.publish("plan/fan","off")
     time.sleep(60*30)
 
