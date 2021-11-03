@@ -25,7 +25,7 @@ MAPS = feeds[0]["MAPS"]
 
 T10value = [] 
 #27 42
-for i in reversed(range((63-42),(63-27))):
+for i in reversed(range((63-14),(63-1))):
     values = list(MAPS[-(i+1)].values())[0]
     tmp = values["s_t0"]
     rh = values["s_h0"]
@@ -56,17 +56,16 @@ x = pd.to_datetime(x, format="%H:%M")
 print(x)
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%H:%M"))
 plt.plot(x,co2)
-plt.title("Controled Co2") # title
+plt.title("original Co2") # title
 plt.ylabel("Concentration of Co2 (ppm)") # y label
 plt.xlabel("Time (hour:min)") # x label
-plt.savefig("original_co2.png")
+plt.savefig("Original_co2.png")
 plt.clf()
 
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%H:%M"))
 plt.plot(x,thi)
-plt.title("Original THI") # title
+plt.title("original THI") # title
 plt.ylabel("Temperature Humidity Index") # y label
 plt.xlabel("Time (hour:min)") # x label
-plt.savefig("original_thi.png")
+plt.savefig("Original_thi.png")
 plt.show()
-
