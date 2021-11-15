@@ -18,7 +18,7 @@ import time
 
 import paho.mqtt.client as mqtt
 client = mqtt.Client()
-client.connect("140.122.184.223", 8883, 60)
+client.connect("***.***.***.***", 8883, 60)
 while(1):
         
     prediction = predict()

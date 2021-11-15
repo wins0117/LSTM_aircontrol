@@ -10,7 +10,7 @@ url = "https://pm25.lass-net.org/API-1.0.0/device/B827EB4AE378/history/"
 ## server/control.py's hostname & port
 ```python
 #hostname & port can reset
-client.connect(hostname = "140.122.184.223", port = 1883)
+client.connect(hostname = "***.***.***.***", port = ****)
 ```
 
 ## server/control.py
@@ -26,7 +26,7 @@ Requirements: io, sys, os, subprocess, paho.mqtt.client, RPi.GPIO
 ## ac/subAcSignal.py and fan/subFanSignal.py's hostname & port
 ```python
 #hostname & port can reset
-client.connect(hostname = "140.122.184.223", port = 1883)
+client.connect(hostname = "***.***.***.***", port = ****)
 ```
 
 ## AC_ir_record.py

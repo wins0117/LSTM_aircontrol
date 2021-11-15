@@ -44,7 +44,7 @@ def main():
     client.on_log=on_log
     client.on_message = on_message
 
-    client.connect("140.122.184.223", 8883)
+    client.connect("***.***.***.***", 8883)
 
     client.loop_forever()
 
